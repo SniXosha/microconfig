@@ -12,6 +12,8 @@ publishing {
 }
 
 dependencies {
+    runtime group: 'org.apache.logging.log4j', name: 'log4j-core'
+
     implementation project(':microconfig:utils'),
             lib.snakeyaml,
             'com.google.code.gson:gson',

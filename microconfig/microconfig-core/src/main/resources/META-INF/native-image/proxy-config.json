@@ -1,0 +1,7 @@
+[
+  ["io.microconfig.core.environments.EnvironmentProvider"],
+  ["io.microconfig.core.properties.ConfigProvider"],
+  ["io.microconfig.core.properties.ConfigProvider","io.microconfig.core.properties.resolver.PropertyResolverHolder"],
+  ["io.microconfig.core.properties.io.ioservice.selector.ConfigFormatDetector"],
+  ["io.microconfig.core.properties.resolver.PropertyResolver"]
+]

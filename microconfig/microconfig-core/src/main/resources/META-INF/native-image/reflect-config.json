@@ -1,0 +1,123 @@
+[
+{
+  "name":"com.oracle.truffle.api.TruffleLanguage"
+},
+{
+  "name":"com.oracle.truffle.api.debug.impl.DebuggerInstrumentProvider",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.oracle.truffle.api.instrumentation.TruffleInstrument"
+},
+{
+  "name":"com.oracle.truffle.api.interop.DefaultBooleanExportsGen"
+},
+{
+  "name":"com.oracle.truffle.api.interop.DefaultByteExportsGen"
+},
+{
+  "name":"com.oracle.truffle.api.interop.DefaultCharacterExportsGen"
+},
+{
+  "name":"com.oracle.truffle.api.interop.DefaultDoubleExportsGen"
+},
+{
+  "name":"com.oracle.truffle.api.interop.DefaultFloatExportsGen"
+},
+{
+  "name":"com.oracle.truffle.api.interop.DefaultIntegerExportsGen"
+},
+{
+  "name":"com.oracle.truffle.api.interop.DefaultLongExportsGen"
+},
+{
+  "name":"com.oracle.truffle.api.interop.DefaultShortExportsGen"
+},
+{
+  "name":"com.oracle.truffle.api.interop.DefaultStringExportsGen"
+},
+{
+  "name":"com.oracle.truffle.api.interop.InteropLibraryGen"
+},
+{
+  "name":"java.io.ObjectInputStream",
+  "allPublicMethods":true
+},
+{
+  "name":"java.lang.reflect.AccessibleObject",
+  "fields":[{"name":"override"}]
+},
+{
+  "name":"java.sql.Date"
+},
+{
+  "name":"java.sql.Timestamp"
+},
+{
+  "name":"org.apache.logging.log4j.core.config.json.JsonConfigurationFactory",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"org.apache.logging.log4j.core.config.properties.PropertiesConfigurationFactory",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"org.apache.logging.log4j.core.config.xml.XmlConfigurationFactory",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"org.apache.logging.log4j.core.config.yaml.YamlConfigurationFactory",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"org.apache.logging.log4j.core.impl.Log4jContextFactory",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"org.apache.logging.log4j.core.lookup.JmxRuntimeInputArgumentsLookup",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"org.apache.logging.log4j.core.lookup.JndiLookup",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"org.apache.logging.log4j.core.pattern.DatePatternConverter",
+  "allDeclaredMethods":true
+},
+{
+  "name":"org.apache.logging.log4j.core.pattern.LevelPatternConverter",
+  "allDeclaredMethods":true
+},
+{
+  "name":"org.apache.logging.log4j.core.pattern.LineSeparatorPatternConverter",
+  "allDeclaredMethods":true
+},
+{
+  "name":"org.apache.logging.log4j.core.pattern.LoggerPatternConverter",
+  "allDeclaredMethods":true
+},
+{
+  "name":"org.apache.logging.log4j.core.pattern.MessagePatternConverter",
+  "allDeclaredMethods":true
+},
+{
+  "name":"org.apache.logging.log4j.core.pattern.ThreadNamePatternConverter",
+  "allDeclaredMethods":true
+},
+{
+  "name":"org.apache.logging.log4j.message.DefaultFlowMessageFactory",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"org.apache.logging.log4j.message.ReusableMessageFactory",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"org.apache.logging.log4j.spi.ExtendedLogger"
+},
+{
+  "name":"sun.misc.Unsafe",
+  "fields":[{"name":"theUnsafe"}]
+}
+]

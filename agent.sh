@@ -1,0 +1,1 @@
+~/graalvm/bin/java -agentlib:native-image-agent=config-output-dir=native -jar microconfig/microconfig-core/build/libs/microconfig-core-3.11.1.jar root=/Users/kapodes/microconfig/blox-config dest=/Users/kapodes/microconfig/build env=dev
