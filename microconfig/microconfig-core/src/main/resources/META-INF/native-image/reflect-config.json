@@ -44,6 +44,27 @@
   "allPublicMethods":true
 },
 {
+  "name":"java.io.Serializable",
+  "allPublicMethods":true
+},
+{
+  "name":"java.lang.CharSequence",
+  "allPublicMethods":true
+},
+{
+  "name":"java.lang.Comparable",
+  "allPublicMethods":true
+},
+{
+  "name":"java.lang.Object",
+  "allDeclaredMethods":true
+},
+{
+  "name":"java.lang.String",
+  "allDeclaredMethods":true,
+  "allPublicMethods":true
+},
+{
   "name":"java.lang.reflect.AccessibleObject",
   "fields":[{"name":"override"}]
 },
@@ -115,6 +136,9 @@
 },
 {
   "name":"org.apache.logging.log4j.spi.ExtendedLogger"
+},
+{
+  "name":"org.springframework.util.ConcurrentReferenceHashMap$Segment[]"
 },
 {
   "name":"sun.misc.Unsafe",
