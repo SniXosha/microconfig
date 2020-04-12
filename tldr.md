@@ -228,6 +228,116 @@ payments:
     url: https://payments-provider.com
 ```  
 
-### templates
-
 ### yaml/properties
+Microconfig supports yaml and properties formats for application configuration interchangeably. You can do #includes and ${placeholders} from one to another.
+
+`components/props/config.properties`
+```properties
+spring.application.name=service
+```
+
+`components/yaml/application.yaml`
+```yaml
+#include props
+
+server:
+  port: 80
+```
+
+`resulting yaml application.yaml`
+```yaml
+server:
+  port: 80
+
+spring:
+  application:
+    name: service
+```  
+
+### different config types
+You can have different configuration types for each component. It is convenient to store you deploy configuration together with application config.
+You can define your own types in `microconfig.yaml`
+
+```yaml
+configTypes:
+  - app:
+      resultFileName: application
+      sourceExtensions:
+        - .yaml
+        - .properties
+  - helm:
+      resultFileName: values
+      sourceExtensions:
+        - .helm
+```
+
+`components/common/helm-probes/values.helm`
+```yaml
+livenessProbe:
+  httpGet:
+    path: /actuator/health
+    port: http
+
+readinessProbe:
+  httpGet:
+    path: /actuator/health
+    port: http
+```
+
+`components/payments/payment-gateway/values.helm`
+```yaml
+#include helm-probes
+
+image: "payment-gateway:latest"
+
+replicas: 1
+
+ingress:
+  host: http://payment-gateway.local
+  annotations:
+    "ingress.class": nginx
+```
+
+`generated version of payment-gateway values.yaml`
+```yaml
+image: "payment-gateway:latest"
+
+replicas: 1
+
+ingress:
+  host: http://payment-gateway.local
+  annotations:
+    "ingress.class": nginx
+
+livenessProbe:
+  httpGet:
+    path: /actuator/health
+    port: http
+
+readinessProbe:
+  httpGet:
+    path: /actuator/health
+    port: http
+```
+
+#### cross type reference
+Placeholders between different config types with additional syntax `${type::component@...}`
+
+`components/payments/payment-service/application.yaml`
+```yaml
+...
+
+gateway:
+  url: ${helm::payment-gateway@ingress.host}
+```
+
+`generated version of payment-service application.yaml`
+```yaml
+...
+gateway:
+  url: http://payment-gateway.local
+```
+
+
+
+### templates
