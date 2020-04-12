@@ -344,8 +344,53 @@ gateway:
 `generated version of payment-service application.yaml`
 ```yaml
 ...
+
 gateway:
   url: http://payment-gateway.local
 ```
 
 ### templates
+Microconfig allows you to keep any 3rd party configuration files in their specific format and resole placeholders inside them.
+Each service will get own copy of template file. 
+
+`components/common/common-log/logback-template.xml`
+```xml
+<configuration>
+    <appender class="ch.qos.logback.core.FileAppender">
+        <file>logs/${this@appName}.log</file>
+        <encoder>
+            <pattern>%d [%thread] %highlight(%-5level) %cyan(%logger{15}) %msg %n</pattern>
+        </encoder>
+    </appender>
+</configuration>
+```
+
+`components/common/common-log/application.yaml`
+```yaml
+microconfig.template.logback:
+  fromFile: ${common-log@configDir}/logback-template.xml
+  toFile: logback.xml
+
+log:
+  level:
+    root: DEBUG
+```
+
+`components/payments/payment-gateway/application.yaml`
+```yaml
+#include common-service, common-log
+
+#var appName: payment-gateway
+```
+
+`resulting logback.xml for payment-gateway`
+```xml
+<configuration>
+    <appender class="ch.qos.logback.core.FileAppender">
+        <file>logs/payment-gateway.log</file>
+        <encoder>
+            <pattern>%d [%thread] %highlight(%-5level) %cyan(%logger{15}) %msg %n</pattern>
+        </encoder>
+    </appender>
+</configuration>
+```
