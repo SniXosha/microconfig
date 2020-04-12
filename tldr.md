@@ -320,8 +320,18 @@ readinessProbe:
     port: http
 ```
 
-#### cross type reference
+### cross type reference
 Placeholders between different config types with additional syntax `${type::component@...}`
+
+`components/payments/payment-gateway/values.helm`
+```yaml
+...
+
+ingress:
+  host: http://payment-gateway.local
+  annotations:
+    "ingress.class": nginx
+```
 
 `components/payments/payment-service/application.yaml`
 ```yaml
@@ -337,7 +347,5 @@ gateway:
 gateway:
   url: http://payment-gateway.local
 ```
-
-
 
 ### templates
