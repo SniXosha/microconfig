@@ -7,7 +7,7 @@ Monoliths on the other hand have a giant configuration files that configure all 
 
 Use Microconfig's easy but powerful syntax to reuse common parts, make environment specific overrides, calculate dynamic values and have different types of configuration working together.  
 
-Microconfig allows you to focus on things that matter most for each service.
+Microconfig allows you to focus on things that matter most.
 
 ### #includes
 You can extract common parts of configuration to a dedicated component and reuse it via `#include`
