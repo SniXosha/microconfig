@@ -1,11 +1,11 @@
 ### Foreword
 
 Microservice architecture implies a lot of similar small services with a similar configuration. 
-Each of those services will have an application config, helm values, a log template and secret data that you need to manage somehow. 
-Multiply that by 50 services across 3 different environments, and you have a giant mess.
+Each of those services will have an application config, helm values, a log template and secret data that you need to manage somehow. Multiply that by 50 services across 3 different environments, and you have a giant mess.
 
-Use Microconfig's easy but powerful syntax to reuse common parts, make environment specific overrides, calculate dynamic values and 
-have different types of configuration working together.  
+Monoliths on the other hand have a giant configuration files that configure all components together making it hard to understand. Editing configuration becomes error prone.
+
+Use Microconfig's easy but powerful syntax to reuse common parts, make environment specific overrides, calculate dynamic values and have different types of configuration working together.  
 
 Microconfig allows you to focus on things that matter most for each service.
 
