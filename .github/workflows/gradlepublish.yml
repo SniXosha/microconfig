@@ -36,7 +36,7 @@ jobs:
         ./.github/scripts/set_gradle_properties.sh ossrhPassword ${{ secrets.SONATYPE_PASSWORD }}
         ./.github/scripts/set_gradle_properties.sh signing.keyId ${{ secrets.SIGNING_KEYID }}
         ./.github/scripts/set_gradle_properties.sh signing.password ${{ secrets.SIGNING_PASSWORD }}
-        ./.github/scripts/set_gradle_properties.sh signing.secretKeyRingFile secring.gpg
+        ./.github/scripts/set_gradle_properties.sh signing.secretKeyRingFile $HOME/secrets/secring.pgp
 
     - name: Publish to Maven Central Staging repository
       run: ./gradlew :microconfig-core:publishNexusPublicationToMavenRepository
