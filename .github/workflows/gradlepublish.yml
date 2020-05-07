@@ -33,9 +33,9 @@ jobs:
     - name: Fill gradle properties
       run: |
         ./.github/scripts/set_gradle_properties.sh ossrhUsername ${{ secrets.SONATYPE_USERNAME }}
-        ./.github/scripts/set_gradle_properties.sh ossrhPassword ${{ secrets.SONATYPE_PASSWORD }}
+        ./.github/scripts/set_gradle_properties.sh ossrhPassword '${{ secrets.SONATYPE_PASSWORD }}'
         ./.github/scripts/set_gradle_properties.sh signing.keyId ${{ secrets.SIGNING_KEYID }}
-        ./.github/scripts/set_gradle_properties.sh signing.password '${{ secrets.SIGNING_PASSWORD }}'
+        ./.github/scripts/set_gradle_properties.sh signing.password ${{ secrets.SIGNING_PASSWORD }}
         ./.github/scripts/set_gradle_properties.sh signing.secretKeyRingFile $HOME/secrets/secring.pgp
 
     - name: Publish to Maven Central Staging repository
